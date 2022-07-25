@@ -28,13 +28,11 @@ body {
     font-family: "TT Lakes";
     font-size: 16px;
     background-color: #F2F2F2;
-    height: 100%;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
@@ -78,7 +76,7 @@ li {
     text-transform: uppercase;
     color: #7E7E82;
 }
-
+@media (max-width: 767.8px) {
 .swiper-wrapper {
     padding: 0 0 0 16px;
 }
@@ -92,7 +90,7 @@ li {
     max-height: 72px;
     padding: 16px;
     width: 240px;
-}
+}}
 
 .brands__button {
     display: flex;
@@ -110,7 +108,7 @@ li {
     border-radius: 50%;
     background: url(images/dropdown.svg) no-repeat center center;
 }
-
+@media (max-width: 767.8px) {
 .swiper {
     height: 120px;
 }
@@ -123,16 +121,11 @@ li {
     width: 13px;
     height: 13px;
     background-color: #B5B6BC;
-}
-
-.brands__list-items {
-    display: none;
-}
+}}
 
 .show-more {
+    padding-left: 28px;
     display: none;
-    margin: 0 auto;
-    width: 95%;
 }
 
 .show-more__text {
@@ -151,21 +144,15 @@ li {
     background-image: url(images/read_more.svg);
     vertical-align: center;
     margin: 0 13px 0 10px;
-    -webkit-transition: all 1ms ease;
-    -o-transition: all 1ms ease;
     transition: all 1ms ease;
 }
 
 .show-more__text--hide::before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
 @media (min-width: 767.8px) {
     .brands__icon {
-        -webkit-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
 
@@ -177,8 +164,8 @@ li {
         margin-bottom: 24px;
     }
 
-    .swiper {
-        display: none;
+    .brands__list-items {
+        margin: 0 auto;
     }
 
     .brands__list-items {
@@ -186,7 +173,6 @@ li {
         padding-top: 5px;
         overflow: hidden;
         width: 95%;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 16px;
@@ -198,13 +184,13 @@ li {
 
 @media (min-width: 767.8px) and (min-width: 768px) {
     .brands__list-items--show-more {
-        height: 344px;
+        height: 336px;
     }
 }
 
 @media (min-width: 767.8px) and (min-width: 1120px) {
     .brands__list-items--show-more {
-        height: 253px;
+        height: 247px;
     }
 }
 
